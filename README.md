@@ -1,7 +1,12 @@
 # WeatherMe
-Search for city name using google places and show weather accordingly.
 
 
-WeatherMe is a single view application. It has a search bar when user starts typing displays the number of country and city results from google places API. 
+WeatherMe is a simple single view application to show current weather. 
 
-When user selects any city and clicks the button 'Show Weather', open weather api is called to show the weather results on the view below.
+Steps to use this app.
+
+1.Download the project.Unzip it and build in xcode.
+2.The view has a "search bar" and "show weather" button
+3.When user starts typing , google place autocomplete API is called to display places results.
+4.User can select any city and can click "show weather" button to see the current weather of the city. 
+5.The weather result is displayed below.
