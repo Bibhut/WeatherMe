@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC74D9653C5F27B5E0C00366 /* Pods_WeatherMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A0DE63F0763AB304198C10 /* Pods_WeatherMe.framework */; };
 		E05D100C25E1553100D32182 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E05D100B25E1553100D32182 /* AppDelegate.m */; };
 		E05D100F25E1553100D32182 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E05D100E25E1553100D32182 /* SceneDelegate.m */; };
 		E05D101225E1553100D32182 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E05D101125E1553100D32182 /* ViewController.m */; };
@@ -14,9 +15,18 @@
 		E05D101725E1553200D32182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05D101625E1553200D32182 /* Assets.xcassets */; };
 		E05D101A25E1553200D32182 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05D101825E1553200D32182 /* LaunchScreen.storyboard */; };
 		E05D101D25E1553200D32182 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E05D101C25E1553200D32182 /* main.m */; };
+		E0FDEB9925E2439200A352A0 /* WMNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FDEB9825E2439200A352A0 /* WMNetworking.m */; };
+		E0FDEB9F25E24EF500A352A0 /* WeatherService.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FDEB9E25E24EF500A352A0 /* WeatherService.m */; };
+		E0FDEBA925E254ED00A352A0 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FDEBA825E254ED00A352A0 /* Location.m */; };
+		E0FDEBB325E255ED00A352A0 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FDEBB225E255ED00A352A0 /* Weather.m */; };
+		E0FDEBB725E2563A00A352A0 /* Main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FDEBB625E2563A00A352A0 /* Main.m */; };
+		E0FDEC0525E2ABA600A352A0 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FDEC0425E2ABA600A352A0 /* Global.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17A0DE63F0763AB304198C10 /* Pods_WeatherMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CB1EB4F984827A0D6D69A0E /* Pods-WeatherMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherMe.debug.xcconfig"; path = "Target Support Files/Pods-WeatherMe/Pods-WeatherMe.debug.xcconfig"; sourceTree = "<group>"; };
+		A8113A7607D7043A5F25E702 /* Pods-WeatherMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherMe.release.xcconfig"; path = "Target Support Files/Pods-WeatherMe/Pods-WeatherMe.release.xcconfig"; sourceTree = "<group>"; };
 		E05D100725E1553100D32182 /* WeatherMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05D100A25E1553100D32182 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E05D100B25E1553100D32182 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +39,20 @@
 		E05D101925E1553200D32182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E05D101B25E1553200D32182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E05D101C25E1553200D32182 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E0FDEB3F25E2194000A352A0 /* WebserviceConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebserviceConstants.h; sourceTree = "<group>"; };
+		E0FDEB4025E21A1D00A352A0 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E0FDEB9725E2437C00A352A0 /* WMNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMNetworking.h; sourceTree = "<group>"; };
+		E0FDEB9825E2439200A352A0 /* WMNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMNetworking.m; sourceTree = "<group>"; };
+		E0FDEB9E25E24EF500A352A0 /* WeatherService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherService.m; sourceTree = "<group>"; };
+		E0FDEBA225E24F0100A352A0 /* WeatherService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherService.h; sourceTree = "<group>"; };
+		E0FDEBA725E254E100A352A0 /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		E0FDEBA825E254ED00A352A0 /* Location.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		E0FDEBB225E255ED00A352A0 /* Weather.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		E0FDEBB525E255FA00A352A0 /* Weather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		E0FDEBB625E2563A00A352A0 /* Main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Main.m; sourceTree = "<group>"; };
+		E0FDEBBA25E2564600A352A0 /* Main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
+		E0FDEC0425E2ABA600A352A0 /* Global.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
+		E0FDEC0725E2ABB100A352A0 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +60,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC74D9653C5F27B5E0C00366 /* Pods_WeatherMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43EAB34C4212E39B93927706 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CB1EB4F984827A0D6D69A0E /* Pods-WeatherMe.debug.xcconfig */,
+				A8113A7607D7043A5F25E702 /* Pods-WeatherMe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A28ACAB3D2DAC4D6F879D186 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17A0DE63F0763AB304198C10 /* Pods_WeatherMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E05D0FFE25E1553100D32182 = {
 			isa = PBXGroup;
 			children = (
 				E05D100925E1553100D32182 /* WeatherMe */,
 				E05D100825E1553100D32182 /* Products */,
+				43EAB34C4212E39B93927706 /* Pods */,
+				A28ACAB3D2DAC4D6F879D186 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,19 +105,113 @@
 		E05D100925E1553100D32182 /* WeatherMe */ = {
 			isa = PBXGroup;
 			children = (
+				E0FDEB9D25E24EC600A352A0 /* Services */,
+				E0FDEB4A25E23AE500A352A0 /* Constant */,
+				E05D102F25E16FF500D32182 /* Helper */,
+				E05D102725E158A200D32182 /* View */,
+				E05D102625E1589500D32182 /* Model */,
+				E05D102525E1588B00D32182 /* Networking */,
+				E05D102425E1588000D32182 /* Controller */,
 				E05D100A25E1553100D32182 /* AppDelegate.h */,
 				E05D100B25E1553100D32182 /* AppDelegate.m */,
 				E05D100D25E1553100D32182 /* SceneDelegate.h */,
 				E05D100E25E1553100D32182 /* SceneDelegate.m */,
-				E05D101025E1553100D32182 /* ViewController.h */,
-				E05D101125E1553100D32182 /* ViewController.m */,
-				E05D101325E1553100D32182 /* Main.storyboard */,
 				E05D101625E1553200D32182 /* Assets.xcassets */,
 				E05D101825E1553200D32182 /* LaunchScreen.storyboard */,
 				E05D101B25E1553200D32182 /* Info.plist */,
 				E05D101C25E1553200D32182 /* main.m */,
 			);
 			path = WeatherMe;
+			sourceTree = "<group>";
+		};
+		E05D102425E1588000D32182 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E05D101025E1553100D32182 /* ViewController.h */,
+				E05D101125E1553100D32182 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E05D102525E1588B00D32182 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E0FDEB9725E2437C00A352A0 /* WMNetworking.h */,
+				E0FDEB9825E2439200A352A0 /* WMNetworking.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E05D102625E1589500D32182 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E0FDEC1125E2C73D00A352A0 /* Main */,
+				E0FDEC1025E2C73000A352A0 /* Weather */,
+				E0FDEC0F25E2C72100A352A0 /* Location */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E05D102725E158A200D32182 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E05D101325E1553100D32182 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E05D102F25E16FF500D32182 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E0FDEC0425E2ABA600A352A0 /* Global.m */,
+				E0FDEC0725E2ABB100A352A0 /* Global.h */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E0FDEB4A25E23AE500A352A0 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				E0FDEB4025E21A1D00A352A0 /* Constants.h */,
+				E0FDEB3F25E2194000A352A0 /* WebserviceConstants.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		E0FDEB9D25E24EC600A352A0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E0FDEB9E25E24EF500A352A0 /* WeatherService.m */,
+				E0FDEBA225E24F0100A352A0 /* WeatherService.h */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E0FDEC0F25E2C72100A352A0 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				E0FDEBA725E254E100A352A0 /* Location.h */,
+				E0FDEBA825E254ED00A352A0 /* Location.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		E0FDEC1025E2C73000A352A0 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				E0FDEBB225E255ED00A352A0 /* Weather.m */,
+				E0FDEBB525E255FA00A352A0 /* Weather.h */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		E0FDEC1125E2C73D00A352A0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E0FDEBB625E2563A00A352A0 /* Main.m */,
+				E0FDEBBA25E2564600A352A0 /* Main.h */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +221,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E05D102025E1553200D32182 /* Build configuration list for PBXNativeTarget "WeatherMe" */;
 			buildPhases = (
+				7E1A5654F9A7D328699388DE /* [CP] Check Pods Manifest.lock */,
 				E05D100325E1553100D32182 /* Sources */,
 				E05D100425E1553100D32182 /* Frameworks */,
 				E05D100525E1553100D32182 /* Resources */,
+				00BBEFE58B6CCE1F45D8084E /* [CP] Copy Pods Resources */,
+				9EC2CACC229BEF219B53C885 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,6 +247,7 @@
 				TargetAttributes = {
 					E05D100625E1553100D32182 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -140,13 +282,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00BBEFE58B6CCE1F45D8084E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherMe/Pods-WeatherMe-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherMe/Pods-WeatherMe-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherMe/Pods-WeatherMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E1A5654F9A7D328699388DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeatherMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EC2CACC229BEF219B53C885 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherMe/Pods-WeatherMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeatherMe/Pods-WeatherMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeatherMe/Pods-WeatherMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E05D100325E1553100D32182 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FDEC0525E2ABA600A352A0 /* Global.m in Sources */,
 				E05D101225E1553100D32182 /* ViewController.m in Sources */,
+				E0FDEBA925E254ED00A352A0 /* Location.m in Sources */,
 				E05D100C25E1553100D32182 /* AppDelegate.m in Sources */,
+				E0FDEB9F25E24EF500A352A0 /* WeatherService.m in Sources */,
+				E0FDEBB325E255ED00A352A0 /* Weather.m in Sources */,
+				E0FDEBB725E2563A00A352A0 /* Main.m in Sources */,
+				E0FDEB9925E2439200A352A0 /* WMNetworking.m in Sources */,
 				E05D101D25E1553200D32182 /* main.m in Sources */,
 				E05D100F25E1553100D32182 /* SceneDelegate.m in Sources */,
 			);
@@ -288,34 +495,45 @@
 		};
 		E05D102125E1553200D32182 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CB1EB4F984827A0D6D69A0E /* Pods-WeatherMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeatherMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BibhutPersonal.WeatherMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeatherMe/Helper/WeatherMe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		E05D102225E1553200D32182 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8113A7607D7043A5F25E702 /* Pods-WeatherMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeatherMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BibhutPersonal.WeatherMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeatherMe/Helper/WeatherMe-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
