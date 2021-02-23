@@ -27,9 +27,13 @@
 
 @implementation ViewController
 
+#pragma mark - Variables
+
 UITableView *tableView;
 GMSAutocompleteTableDataSource *tableDataSource;
 
+
+#pragma mark - view lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initialLoad];
@@ -38,18 +42,17 @@ GMSAutocompleteTableDataSource *tableDataSource;
 
 
 #pragma mark - IBACtions
+
 - (IBAction)showWeather:(id)sender {
-    self.searchText.text = [self.searchText.text stringByReplacingOccurrencesOfString:@" " withString:@""]  ;
-    if ([self.searchText.text  isEqual: @""]) {
+    NSString *searchText = [self.searchText.text stringByReplacingOccurrencesOfString:@" " withString:@""]  ;
+    if ([searchText isEqual: @""]) {
         return;
     }
     
-    [WeatherService getCurrentWeatherDataFromCity:self.searchText.text handler:^(BOOL status, Location *locationWeatherData) {
-        if (status) {
-            [self populateWeatherData:locationWeatherData];
-        } else {
-            [self showFailureAlert];
-        }
+    [WeatherService getCurrentWeatherDataFromCity:searchText handler:^(Location *locationWeatherData) {
+        [self populateWeatherData:locationWeatherData];
+    } onFailureHandler:^(NSString *message) {
+        [self showFailureAlert:message];
     }];
 }
 
@@ -65,9 +68,9 @@ GMSAutocompleteTableDataSource *tableDataSource;
     [self.view addSubview:tableView];
 }
 
--(void)showFailureAlert{
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Weather"
-                                                                   message:@"Data Not Found"
+-(void)showFailureAlert:(NSString *)message{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@""
+                                                                   message:message
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault

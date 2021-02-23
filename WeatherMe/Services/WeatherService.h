@@ -7,10 +7,10 @@
 #import <Foundation/Foundation.h>
 #import "Location.h"
 
-typedef void (^weatherDataCompletionHandler)(BOOL status, Location *locationWeatherData);
+typedef void (^weatherDataCompletionHandler)(Location *locationWeatherData);
+typedef void (^failureHandler)(NSString* message);
 
 
 @interface WeatherService : NSObject
-
-+ (void)getCurrentWeatherDataFromCity:(NSString *)cityName handler:(weatherDataCompletionHandler)onComplete;
++ (void)getCurrentWeatherDataFromCity:(NSString *)cityName handler:(weatherDataCompletionHandler)onComplete onFailureHandler:(failureHandler)onComplete;
 @end

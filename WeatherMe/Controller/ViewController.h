@@ -6,9 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController<CLLocationManagerDelegate>
+@interface ViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UISearchBar *searchText;
 @property (weak, nonatomic) IBOutlet UIView *vSearch;
 @property (weak, nonatomic) IBOutlet UIButton *btnShowWeather;

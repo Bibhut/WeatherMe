@@ -6,15 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-//
-//  Network.m
-//  iAcquaint
-//
-//  Created by Hem Poudyal on 7/26/18.
-//  Copyright © 2018 zco. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
 #import "WMNetworking.h"
 #import "AFNetworking.h"
 #import "WebserviceConstants.h"
@@ -25,35 +16,39 @@
 // Get singleton instance of this class.
 + (WMNetworking *)sharedManager
 {
-static dispatch_once_t once;
-static WMNetworking * sharedInstance;
-dispatch_once(&once, ^{
-   sharedInstance = [[self alloc] init];
-});
-return sharedInstance;
+    static dispatch_once_t once;
+    static WMNetworking * sharedInstance;
+    dispatch_once(&once, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
 }
 
 -(void) GetRequest:(NSString *) stringURL andParameter:(NSDictionary *) parameter withCompletionBlock:(completionHandler)responseHandler{
-  NSString *stringFormOfUrl = [NSString stringWithFormat:(@"%@%@&appid=%@"),kBASEURL,stringURL,kWeatherAPIKey];
-
-AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-AFJSONRequestSerializer *serializer = [AFJSONRequestSerializer serializer];
-[serializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-manager.requestSerializer = serializer;
-  
-  
-  [manager GET:stringFormOfUrl parameters:parameter headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-    NSNumber *code = [responseObject objectForKey:@"cod"];
-    if ([code isEqualToNumber:@200 ]){
-          responseHandler(YES,responseObject);
-      } else {
-          responseHandler(NO,responseObject);
-      }
+   
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    AFJSONRequestSerializer *serializer = [AFJSONRequestSerializer serializer];
+    [serializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    manager.requestSerializer = serializer;
+    
+    [manager GET:stringURL parameters:parameter headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSNumber *code = [responseObject objectForKey:@"cod"];
+        if ([code isEqualToNumber:@200 ]){
+            responseHandler(YES,responseObject);
+        } else {
+            NSLog(@"%@",responseObject);
+            responseHandler(NO,responseObject);
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-      responseHandler(NO,nil);
+        //failure response data converted to dictionary format in order to manage response handler.
+        NSData *data= error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSString *failureResponse = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSData *responseData = [failureResponse dataUsingEncoding:NSUTF8StringEncoding];
+        id failure = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
+        responseHandler(NO,failure);
     }];
 }
-  
+
 
 
 @end

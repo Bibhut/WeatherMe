@@ -6,6 +6,4 @@
 //
 
 
-#import <Foundation/Foundation.h>
-
 #define kBASEURL    @"https://api.openweathermap.org/data/2.5/weather?q="
